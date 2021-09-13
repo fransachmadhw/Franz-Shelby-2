@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style-contact.css">
+    <link rel="stylesheet" href="assets/css/transition.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Franz Shelby</title>
+</head>
+<body>
+
+    <div class="transition transition-5 is-active">
+        <h2>Please Wait</h2>
+        <h2><i class='bx bxs-hourglass'></i></h2>
+    </div>
+
+    <header>        
+        <nav class="nav body-grid-nav">
+            
+            <div>
+                <a href="/index.html" class="nav_logo">Franz Shelby</a>
+            </div>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="/index.html" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="/about.html" class="nav_link">About</a></li>
+                    <li class="nav_item"><a href="/skills.html" class="nav_link ">Skills</a></li>
+                    <li class="nav_item"><a href="/portfolio.html" class="nav_link ">Portfolio</a></li>
+                    <li class="nav_item"><a href="/contact.html" class="nav_link active">Contact</a></li>
+                    <!-- <li class="nav_item"><img src="assets/img/moon.png" id="icon"x alt=""></li> -->
+                </ul>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main id="swup" class="main transition-fade">
+
+        <!-- Home -->
+        <section class="contact" id="contact">
+            <div class="contact_container body-grid-contact">
+
+                <div class="contact_title">
+                    <h2 class="first">Let's chat.</h2>
+                    <h2 class="second">Tell me about your</h2>
+                    <h2 class="third">project.</h2><br>
+                    <span class="last">Let's create something together 🤘</span>
+
+                    <div class="icons">
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+
+                <div class="contact_form">
+                    <h2>Send me a message 🚀</h2>
+                    <form action="https://formsubmit.co/f501558f556ecd2271999fb037408afb" method="POST" class="contact_form">
+                        <div class="contact_inputs">
+                            <input type="hidden" name="_autoresponse" value="Hello mate. Thanks for contacting me. What can I help you?">
+                            <input type="hidden" name="_subject" value="New email wooooo">
+                            <input type="text" placeholder="Full Name*" class="contact_input" name="name" required>
+                            <input type="email" name="email" placeholder="Email Address*" class="contact_input" required>
+                            <input type="text" placeholder="Subject" class="contact_input" name="subject">
+                        </div>
+    
+                        <h3>Tell me about your project*</h3>
+                        <textarea name="message" id="" cols="0" rows="3" class="contact_input" required></textarea>
+    
+                        <input type="submit" value="Send Message" class="contact_button">
+                    </form>
+                </div>
+
+        </section>
+
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scroll.js"></script>
+
+
+</body>
+</html>

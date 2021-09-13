@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/transition.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Franz Shelby</title>
+</head>
+<body>
+
+    <div class="transition transition-1 is-active">
+        <h2>Please Wait</h2>
+        <h2><i class='bx bxs-hourglass'></i></h2>
+    </div>
+
+    <header>        
+        <nav class="nav body-grid-nav">
+            
+            <div>
+                <a href="/index.html" class="nav_logo">Franz Shelby</a>
+            </div>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link active">Home</a></li>
+                    <li class="nav_item"><a href="/about.html" class="nav_link">About</a></li>
+                    <li class="nav_item"><a href="/skills.html" class="nav_link">Skills</a></li>
+                    <li class="nav_item"><a href="/portfolio.html" class="nav_link">Portfolio</a></li>
+                    <li class="nav_item"><a href="/contact.html" class="nav_link">Contact</a></li>
+                    <!-- <li class="nav_item"><img src="assets/img/moon.png" id="icon"x alt=""></li> -->
+                </ul>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main>
+
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home_container body-grid-home">
+                <div class="cover">
+                    <div class="home_subscribe">
+                        <a href="#">Subscribe <i class='bx bxs-paper-plane bx-rotate-90' ></i></a>
+                    </div>
+
+                    <div class="home_img">
+                        <!-- <img src="assets/images/profile.jpg" alt="profile"> -->
+
+                            <div class="home_social" id="home-social">
+
+                                <div class="home_icon instagram" id="home-icon">
+                                    <div class="tooltip">Instagram</div>
+                                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                                </div>
+
+                                <div class="home_icon youtube" id="home-icon2">
+                                    <div class="tooltip">YouTube</div>
+                                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                                </div>
+
+                                <div class="home_icon github" id="home-icon3">
+                                    <div class="tooltip">GitHub</div>
+                                    <a href="#"><i class='bx bxl-github'></i></a>
+                                </div>
+
+                                <div class="home_icon linkedin" id="home-icon4">
+                                    <div class="tooltip">LinkedIn</div>
+                                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                                </div>
+
+                            </div>
+
+                            <div class="arrow_left" id="arrow-left" onclick="toggle()">
+                                <i class='bx bx-left-arrow-alt'></i>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="home_title">
+                        <div class="bg">
+                            <div class="arrow">
+                                <a href="/about.html" class="link-1"><i class='bx bx-right-arrow-alt'></i></a>
+                                <a href="/about.html" class="link-2">NEXT</a>
+                            </div>
+                        </div>
+                        <h1 class="first">Franz Shelby</h1>
+                        <h2 class="second">Software Engineer | London</h2>
+                        <p class="third">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At minus distinctio accusamus earum neque, temporibus quisquam quasi sed laudantium harum, minima sint! Incidunt aperiam odit molestiae aut qui unde reprehenderit? Voluptas quidem nam dicta enim?</p> 
+                        <p class="last"><span>-----------------</span>Know More</p>               
+                    </div>
+
+                </div>
+                <div class="home_icon_bottom">
+                    <div class="icon">
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scroll.js"></script>
+
+</body>
+</html>

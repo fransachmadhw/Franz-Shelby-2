@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --header-height: 3rem;
+    --font-medium: 500;
+}
+
+/* Colours */
+:root {
+    --bg-colour: #FAFAFF;
+    --first-colour: #d8a824;
+    --subtitle-colour: #f02e2e;
+    --white-colour: #FAFAFF;
+    --white2-colour: #efefef;
+    --dark-colour: #3a3a3a;
+    --dark2-colour: #5c5c5c;
+    --text-colour: #697477;
+    --header-colour: 194, 14, 14;
+    --footer-colour: #f0f0f0;
+}
+
+.dark-theme {
+    --bg-colour: #0c0c0c;
+    --first-colour: #0c0c0c;
+    --subtitle-colour: #e41b1b;
+    --white-colour: #f0f0f0;
+    --white2-colour: #efefef;
+    --dark-colour: #f0f0f0;
+    --dark2-colour: #101010;
+    --text-colour: #e4e4e4;
+    --header-colour: 24, 24, 24;
+    --footer-colour: #2e2e2e;
+}
+
+/* Fonts and Typographies */
+:root {
+    --body-font: 'Nunito', sans-serif;
+    --big-font-size: 6.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 768px)
+{
+    :root {
+        --big-font-size: 10.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* Margins */
+:root {
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+}
+
+/* Z-index */
+:root {
+    --z-fixed: 100;
+}
+
+/* Base */
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+
+
+/* Layout */
+.body-grid {
+    max-width: 1024px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+}
+
+.body-grid-nav {
+    max-width: 90vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.body-grid-portfolio {
+    max-width: 75vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    width: calc(100% - 2rem);
+    /* margin: 0 auto; */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--white-colour);
+}
+
+/* Navigation */
+.nav {
+    height: var(--header-height);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media screen and (max-width: 480px)
+{
+
+    .nav { height: calc(var(--header-height) + 1rem); }
+
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+    }
+
+}
+
+.nav_item {
+    margin-bottom: var(--mb-4);
+}
+
+.nav_link {
+    position: relative;
+    color: var(--dark-colour);
+}
+
+.nav_link.active {
+    color: var(--first-colour);
+    font-weight: bolder;
+    pointer-events: none;
+}   
+
+.nav_link:hover {
+    color: var(--first-colour);
+}
+
+.nav_logo {
+    color: var(--dark-colour);
+    font-size: var(--h2-font-size);
+}
+
+.nav_toggle {
+    color: var(--dark-colour);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: var(--z-fixed);
+}
+
+
+
+/* Show Menu */
+.show {
+    right: 0;
+}
+
+
+/* Home */
+.portfolio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.portfolio_container .cover {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
+    width: 75vw;
+    height: 100vh;
+}
+
+.swiper {
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background: #f1f1f1;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006); */
+  }
+
+  .swiper-slide .imgBox {
+      position: absolute;
+      width: 25vw;
+      height: 25vw;
+  }
+
+  .swiper-slide .imgBox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .swiper-slide .details {
+      position: absolute;
+      bottom: 0;
+      height: 10vh;
+      width: 100%;
+      background: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4.3vw;
+  }
+
+  .swiper-slide .details h3 {
+      font-size: 2.2vw;
+      color: var(--first-colour);
+  }
+
+  .swiper-slide .details span {
+      font-size: 1.5vw;
+      color: var(--dark-colour);
+  }
+
+
+
+
+
+@media screen and (max-width: 480px)
+{
+
+    .body-grid-portfolio {
+        max-width: 93vw;
+    }
+
+    .portfolio_container {
+        margin: calc(var(--mb-4) + 5vh) auto;
+        margin-bottom: 3vh;
+    }
+
+    .portfolio_container .cover {
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 90vw;
+        width: calc(100% - 2rem);
+            /* margin: 0 auto; */
+        margin: 0;
+        padding: 0;
+        justify-self: center;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+    .swiper {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .swiper-slide .imgBox {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .swiper-slide .details {
+        padding: 5vw;
+    }
+
+    .swiper-slide .details h3 {
+        font-size: 2.5vh;
+    }
+
+    .swiper-slide .details span {
+        font-size: 1.5vh;
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    
+    .nav {
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav_logo {
+        color: var(--dark-colour);
+    }
+
+    .nav_list {
+        display: flex;
+    }
+
+    .nav_item {
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+        font-size: 2vw;
+    }
+
+    .nav_toggle { display: none; }
+
+    .nav_link {
+        color: var(--dark-colour);
+        position: relative;
+    }
+
+    .nav_link:hover {
+        color: var(--white-colour);
+    }
+
+    .nav_link.active {
+        color: var(--first-colour);
+        font-weight: bolder;
+    }
+
+    .portfolio_container {
+        margin-top: 30vw;
+        margin-bottom: 10vw;
+    }
+
+    .portfolio_container .cover {
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 90vw;
+        width: calc(100% - 2rem);
+            /* margin: 0 auto; */
+        margin: 0;
+        padding: 0;
+        justify-self: center;
+        align-self: center;
+        justify-content: space-around;
+        margin-top: 25vw;
+        margin-bottom: 25vw;
+    }
+
+    .swiper {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .swiper-slide .imgBox {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .swiper-slide .details {
+        padding: 10vw;
+    }
+
+    .swiper-slide .details h3 {
+        font-size: 4.5vw;
+    }
+
+    .swiper-slide .details span {
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (min-width: 1025px)
+{
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav_logo {
+        color: var(--dark-colour);
+    }
+
+    .nav_list {
+        display: flex;
+    }
+
+    .nav_item {
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+        font-size: 1.5vw;
+    }
+
+    .nav_toggle {
+        display: none;
+    }
+
+    .nav_link {
+        color: var(--dark-colour);
+        position: relative;
+    }
+
+    .nav_link:hover {  }
+
+    .nav_link.active {
+        color: var(--first-colour);
+        font-weight: bolder;
+    }
+    
+
+}

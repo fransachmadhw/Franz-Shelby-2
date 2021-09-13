@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style-portfolio.css">
+    <link rel="stylesheet" href="assets/css/transition.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Swiper.js -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+    <title>Franz Shelby</title>
+</head>
+<body>
+
+    <div class="transition transition-4 is-active">
+        <h2>Please Wait</h2>
+        <h2><i class='bx bxs-hourglass'></i></h2>
+    </div>
+
+    <header>        
+        <nav class="nav body-grid-nav">
+            
+            <div>
+                <a href="/index.html" class="nav_logo">Franz Shelby</a>
+            </div>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="/index.html" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="/about.html" class="nav_link">About</a></li>
+                    <li class="nav_item"><a href="/skills.html" class="nav_link ">Skills</a></li>
+                    <li class="nav_item"><a href="/portfolio.html" class="nav_link active">Portfolio</a></li>
+                    <li class="nav_item"><a href="/contact.html" class="nav_link">Contact</a></li>
+                    <!-- <li class="nav_item"><img src="assets/img/moon.png" id="icon"x alt=""></li> -->
+                </ul>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main id="swup" class="main transition-fade">
+
+        <!-- Home -->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio_container body-grid-portfolio">
+                <div class="cover">
+                      <!-- Swiper -->
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work1.jpg" alt="img1">
+                              </div>
+                              <div class="details">
+                                <h3>Work 1<br><span>Website</span></h3>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work2.jpg" alt="img2">
+                              </div>
+                              <div class="details">
+                                <h3>Work 2<br><span>Website</span></h3>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work3.jpg" alt="img3">
+                              </div>
+                              <div class="details">
+                                <h3>Work 3<br><span>Website</span></h3>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Add Pagination -->
+                          <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work4.jpg" alt="img4">
+                              </div>
+                              <div class="details">
+                                <h3>Work 4<br><span>Design</span></h3>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work5.jpg" alt="img5">
+                              </div>
+                              <div class="details">
+                                <h3>Work 5<br><span>Design</span></h3>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="imgBox">
+                                <img src="assets/images/work6.jpg" alt="img6">
+                              </div>
+                              <div class="details">
+                                <h3>Work 6<br><span>Design</span></h3>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Add Pagination -->
+                          <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+
+                </div>
+        </section>
+
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script type="module">
+        var swiper = new Swiper('.swiper', {
+          effect: 'cube',
+          grabCursor: true,
+          cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 25,
+            shadowScale: 0.94,
+          },
+          loop: true,
+          autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        });
+      </script>
+
+</body>
+</html>
